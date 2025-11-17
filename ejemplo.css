@@ -91,7 +91,6 @@ body {
        .Logos {
             display: flex;
             justify-content: center;
-            gap: 20px;
             background-color: white;
             border-radius: 20px;
             padding: 20px;
