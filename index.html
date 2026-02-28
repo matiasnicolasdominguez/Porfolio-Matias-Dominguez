@@ -9,6 +9,64 @@
 </head>
 <body>
 
+    <style>
+        .video-carousel {
+  position: relative;
+  width: auto;
+  margin: auto;
+  overflow: hidden;
+}
+
+.carousel-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  display: flex;
+  transition: transform 0.5s;
+  width: 100%;
+    gap: 197px;
+    padding: 10px 0;
+}
+.carousel-item > a {
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+
+video {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.prev-btn, .next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50px;
+  font-size: 24px;
+}
+
+.prev-btn {
+  left: 10px;
+}
+
+.next-btn {
+  right: 10px;
+}
+
+.prev-btn:hover, .next-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+    </style>
+    
     <header>
 
     <img src="fotos/Foto del 2025-05-15 21-46-27.108740.jpeg" width="150" height="130">
@@ -34,8 +92,9 @@
 
     <h2>imagenes de los lenguajes de Programacion</h2>
 
-    <div class="skills">
-        <div class="Logos">
+    <div class="video-carousel">
+    <div class="carousel-container">
+        <div class="carousel-item">
             <img width="100" height="100" src="logos/html5.png" alt="HTML5">
             <img width="100" height="100" src="logos/css3.png" alt="CSS3">
             <img width="100" height="100" src="logos/JavaScript.png" alt="JavaScript">
@@ -43,6 +102,9 @@
             <img width="100" height="100" src="logos/Ruby.png" alt="Ruby">
             <img width="100" height="100" src="logos/sql.png" alt="SQL">
         </div>
+    </div>
+    <button class="prev-btn">❮</button>
+    <button class="next-btn">❯</button>
     </div>
 
     <h2>Proyectos</h2>
@@ -172,6 +234,8 @@
 <footer>
     © Copirigh 2025 Matías Domínguez. Todos los derechos reservados.
 </footer>
+
+<script src="carucel.js"></script>
 
 </body>
 </html>
